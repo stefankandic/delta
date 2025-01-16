@@ -229,7 +229,7 @@ object ColumnWithDefaultExprUtils extends DeltaLogging {
    * the micro batch DataFrame. A streaming micro batch DataFrame to execute should use
    * `IncrementalExecution`.
    */
-  private def selectFromStreamingDataFrame(
+  def selectFromStreamingDataFrame(
       incrementalExecution: IncrementalExecution,
       df: DataFrame,
       cols: Column*): DataFrame = {
